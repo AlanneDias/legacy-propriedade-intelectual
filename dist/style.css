@@ -45,7 +45,7 @@ em{font-style:normal} /* destaque só na cor, mesma fonte da frase */
 .band-tint{background:var(--tint)}
 .band-dark{background:var(--purple);color:var(--cream)}
 
-.btn{display:inline-block;background:none;color:var(--purple);border:0;border-bottom:1px solid var(--gold);padding:6px 0;font:600 var(--fs-xs) var(--sans);letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:background .2s,color .2s}
+.btn{display:inline-block;background:none;color:var(--purple);border:0;border-bottom:1px solid var(--gold);padding:6px 0;font:600 var(--fs-xs) var(--sans);letter-spacing:2px;line-height:1.5;text-transform:uppercase;cursor:pointer;transition:background .2s,color .2s}
 .btn:hover{color:var(--gold)}
 
 /* Dourado mais escuro sobre fundos claros, para manter a leitura */
