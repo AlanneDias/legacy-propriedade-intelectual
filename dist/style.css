@@ -100,12 +100,15 @@ summary:hover,details[open] summary{color:var(--gold)}
 .s-num{font:600 var(--fs-xs) var(--sans);letter-spacing:2px;color:var(--gold);min-width:22px}
 summary:after{content:'+';margin-left:auto;font:300 var(--fs-md)/1 var(--sans);color:var(--gold)}
 details[open] summary:after{content:'−'}
-.service-content{padding:0 40px 26px 46px;font-size:var(--fs-sm);color:var(--cream-soft)}
-.service-content p{margin-bottom:12px}
-.service-content p:first-child{font:var(--fs-sm)/1.6 var(--sans);color:var(--cream)}
-.service-content ul{padding-left:18px;margin:0 0 16px;columns:2;column-gap:32px}
-.service-content li{break-inside:avoid;margin-bottom:4px}
-.service-content li::marker{color:var(--gold)}
+.service-content{display:grid;grid-template-columns:1fr 1fr;gap:48px;padding:6px 44px 36px 46px;color:var(--cream-soft)}
+.svc-intro p{font-size:var(--fs-sm);line-height:1.85;margin:0}
+.svc-intro .svc-lead{font-size:var(--fs-md);line-height:1.5;color:var(--cream);margin-bottom:16px}
+.svc-lists h4{font:600 var(--fs-xs)/1.4 var(--sans);letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin:0 0 10px}
+.svc-lists ul{list-style:none;margin:0 0 26px;padding:0}
+.svc-lists ul:last-child{margin-bottom:0}
+.svc-lists li{position:relative;font-size:var(--fs-sm);line-height:1.6;padding:8px 0 8px 22px;border-bottom:1px solid rgba(195,160,123,.18)}
+.svc-lists li:last-child{border-bottom:0}
+.svc-lists li:before{content:'';position:absolute;left:2px;top:17px;width:10px;height:1px;background:var(--gold)}
 
 /* Pilares sobre foto */
 .pillars{position:relative;padding:110px 20px;overflow:clip}
@@ -168,7 +171,7 @@ textarea{resize:vertical}
 /* Responsivo */
 @media(max-width:860px){
   .hero{height:580px}.hero-header{height:145px}.brand{width:110px;top:82px}.hero-content{margin-top:80px}.hero-header nav{gap:24px;padding:8px 25px}
-  .service-content ul{columns:1}
+  .service-content{grid-template-columns:1fr;gap:26px}
   .contact-grid{grid-template-columns:1fr;gap:44px}
   .included-split,.profile-split{grid-template-columns:1fr;min-height:0}
   .profile-photo{order:-1;height:520px}
@@ -190,7 +193,7 @@ textarea{resize:vertical}
   .rule{margin:16px auto}
   .services{padding:70px 16px 80px}
   summary{gap:14px}
-  .service-content{padding:0 4px 22px 40px}
+  .service-content{padding:4px 4px 28px 40px}
   .contact{padding:70px 0}
   .contact-form{padding:30px 22px 24px}
   .footer-top{flex-direction:column;gap:24px}

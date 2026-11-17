@@ -5,11 +5,21 @@ names.forEach((name,index)=>{
   const summary=document.createElement('summary');
   const num=document.createElement('span');num.className='s-num';num.textContent=String(index+1).padStart(2,'0');
   summary.append(num,document.createTextNode(name));detail.append(summary);
+  // Organiza cada resposta em duas partes: apresentação e listas
+  const [lead,desc,...rest]=window.legacyServices[index];
   const content=document.createElement('div');content.className='service-content';
-  window.legacyServices[index].forEach(item=>{
-    if(Array.isArray(item)){const ul=document.createElement('ul');item.forEach(t=>{const li=document.createElement('li');li.textContent=t;ul.append(li)});content.append(ul)}
-    else{const p=document.createElement('p');p.textContent=item;content.append(p)}
-  });
+  const intro=document.createElement('div');intro.className='svc-intro';
+  const pLead=document.createElement('p');pLead.className='svc-lead';pLead.textContent=lead;
+  const pDesc=document.createElement('p');pDesc.textContent=desc;
+  intro.append(pLead,pDesc);
+  const lists=document.createElement('div');lists.className='svc-lists';
+  for(let i=0;i<rest.length;i+=2){
+    const h=document.createElement('h4');h.textContent=rest[i].replace(/:$/,'');
+    const ul=document.createElement('ul');
+    rest[i+1].forEach(item=>{const li=document.createElement('li');li.textContent=item;ul.append(li)});
+    lists.append(h,ul);
+  }
+  content.append(intro,lists);
   detail.append(content);list.append(detail);
 });
 
