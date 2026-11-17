@@ -125,21 +125,16 @@ details[open] summary:after{content:'−'}
 .pillar p{font-size:var(--fs-sm);color:var(--soft);margin:0}
 .pillars-cta{position:relative;text-align:center;margin-top:46px}
 
-/* Nyllávia */
-.profile{padding:100px 20px 110px}
-.profile h2{font-size:var(--script-lg);margin-bottom:64px}
-.story{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;width:min(820px,100%);margin:0 auto 64px}
-.story:last-child{margin-bottom:0}
-.story.reverse .story-img{order:2}
-.story-img{width:100%;aspect-ratio:1.45;object-fit:cover}
-.story-img.portrait{aspect-ratio:4/5;object-position:center 15%;max-width:340px;justify-self:end}
-.story.reverse .story-img{max-width:300px;aspect-ratio:4/5;justify-self:start}
-.seal{display:grid;place-items:center;aspect-ratio:1.45}
-.seal img{width:150px}
-.story-copy{font-size:var(--fs-sm);color:var(--cream-soft)}
-.story-copy p{margin:0}
+/* Nyllávia: texto à esquerda, foto à direita */
+.profile-split{display:grid;grid-template-columns:1fr 1fr;align-items:stretch;min-height:760px}
+.profile-copy{align-self:center;padding:96px 72px 96px max(40px,calc((100vw - 1040px)/2));font-size:var(--fs-sm);color:var(--cream-soft)}
+.profile h2{font-size:var(--script-lg);color:var(--cream);margin-bottom:28px}
+.profile-copy p{margin:0 0 16px}
 .story-lead{font-size:var(--fs-md);line-height:1.6;color:var(--cream)}
-.sign{display:block;margin-top:18px;font:var(--script-md) var(--script);color:var(--gold)}
+.profile-copy .story-lead{margin-bottom:24px}
+.sign{display:block;margin-top:24px;font:var(--script-md) var(--script);color:var(--gold)}
+.profile-photo{position:relative}
+.profile-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 20%}
 
 /* Contato */
 .contact{padding:100px 0}
@@ -176,7 +171,9 @@ textarea{resize:vertical}
   .hero{height:580px}.hero-header{height:145px}.brand{width:110px;top:82px}.hero-content{margin-top:80px}.hero-header nav{gap:24px;padding:8px 25px}
   .service-content ul{columns:1}
   .contact-grid{grid-template-columns:1fr;gap:44px}
-  .included-split{grid-template-columns:1fr;min-height:0}
+  .included-split,.profile-split{grid-template-columns:1fr;min-height:0}
+  .profile-photo{order:-1;height:520px}
+  .profile-copy{padding:56px 40px 70px}
   .included-media{height:420px}
   .included-copy{padding:56px 40px 70px}
 }
@@ -184,7 +181,8 @@ textarea{resize:vertical}
   .hero{height:540px;background-position:60% center}.hero-header{width:90%;height:175px;padding-top:24px}.hero-header nav{width:100%;justify-content:center;gap:12px;letter-spacing:.4px;padding:9px 10px}.brand{top:77px;width:98px}.hero-content{width:90%;margin-top:72px}.hero h1{letter-spacing:1px}.hero-content p{font-size:var(--fs-sm);max-width:290px}
   .statement{padding:90px 0}
   .included-media{height:320px}
-  .included-copy{padding:44px 20px 60px}
+  .included-copy,.profile-copy{padding:44px 20px 60px}
+  .profile-photo{height:420px}
   .drop-line{height:90px;top:-30px}
   .pillars{padding:70px 20px}
   .pillar{grid-template-columns:1fr;gap:20px;padding:34px 26px;text-align:center;top:calc(70px + var(--i,0) * 18px)}
@@ -194,11 +192,6 @@ textarea{resize:vertical}
   .services{padding:70px 16px 80px}
   summary{gap:14px}
   .service-content{padding:0 4px 22px 40px}
-  .profile{padding:70px 20px 80px}
-  .profile h2{margin-bottom:44px}
-  .story{grid-template-columns:1fr;gap:24px;margin-bottom:50px}
-  .story.reverse .story-img{order:0}
-  .story-img.portrait,.story.reverse .story-img{justify-self:center;max-width:300px}
   .contact{padding:70px 0}
   .contact-form{padding:30px 22px 24px}
   .footer-top{flex-direction:column;gap:24px}
