@@ -52,14 +52,14 @@ em{font-style:normal} /* destaque só na cor, mesma fonte da frase */
 .statement,.included,.pillars,.contact,.site-footer{--gold:#806023}
 
 /* Abertura (mantida como no layout original) */
-.hero{position:relative;height:650px;background:var(--purple) url('assets/abertura.avif') center/cover;color:var(--cream)}
-.hero-shade{position:absolute;inset:0;background:rgba(0,0,0,.48)}
+.hero{position:relative;height:540px;background:var(--purple) url('assets/abertura.avif') center/cover;color:var(--cream)}
+.hero-shade{position:absolute;inset:0;background:rgba(0,0,0,.8)}
 .hero-header{position:relative;width:86%;margin:auto;height:155px;padding-top:34px}
 .brand{position:absolute;right:0;top:65px;width:145px}
 .brand img{width:100%;height:auto}
 .hero-header nav{display:flex;align-items:center;width:fit-content;margin:0 auto;border-radius:30px;background:var(--purple);padding:7px 38px;gap:35px;font-size:var(--fs-xs);line-height:1.5;letter-spacing:1.2px;text-transform:uppercase}
 .hero-header nav a:hover{color:var(--gold)}
-.hero-content{position:relative;width:86%;margin:88px auto 0}
+.hero-content{position:relative;width:86%;margin:50px auto 0}
 .eyebrow{display:block;font-family:var(--logo);font-size:var(--logo-lg);letter-spacing:5px;font-weight:300;line-height:1.3;margin:0 0 0 -.08em} /* compensa o recuo da letra L */
 .hero h1{font:300 var(--fs-lg)/1.4 var(--sans);letter-spacing:2px;margin:0 0 22px}
 .hero-content p{font-size:var(--fs-md);line-height:1.8;font-weight:300}
@@ -77,15 +77,16 @@ em{font-style:normal} /* destaque só na cor, mesma fonte da frase */
 .included-media{position:relative}
 .included-copy{align-self:center;padding:96px max(40px,calc((100vw - 1040px)/2)) 96px 72px}
 .included-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:45% center}
-.intro-serif{font-size:var(--fs-md);line-height:1.55;margin:0 0 40px}
-.intro-serif em{color:var(--gold)}
-.included-copy h2{font-size:var(--fs-lg);margin:0 0 22px}
+/* Três blocos com o mesmo padrão: título e texto */
+.qs-block{padding:28px 0;border-top:1px solid var(--line)}
+.qs-block:first-child{border-top:0;padding-top:0}
+.qs-block:last-child{padding-bottom:0}
+.qs-title{font:400 var(--fs-md)/1.3 var(--sans);text-transform:uppercase;letter-spacing:.12em;color:var(--purple);margin:0 0 14px}
+.qs-block p{font-size:var(--fs-sm);line-height:1.8;color:var(--soft);margin:0}
 .checks{list-style:none;margin:0;padding:0;font-size:var(--fs-sm);color:var(--soft)}
-.checks li{position:relative;padding-left:28px;margin-bottom:10px}
-.checks li:before{content:'';position:absolute;left:3px;top:6px;width:10px;height:5px;border-left:1.5px solid var(--gold);border-bottom:1.5px solid var(--gold);transform:rotate(-45deg)}
-.how{margin-top:40px;border-top:1px solid var(--line);padding-top:32px}
-.how h3{font:var(--script-md) var(--script);margin-bottom:10px}
-.how p{font-size:var(--fs-sm);color:var(--soft);margin:0}
+.checks li{position:relative;padding-left:28px;margin-bottom:6px;line-height:1.8}
+.checks li:last-child{margin-bottom:0}
+.checks li:before{content:'';position:absolute;left:3px;top:8px;width:10px;height:5px;border-left:1.5px solid var(--gold);border-bottom:1.5px solid var(--gold);transform:rotate(-45deg)}
 
 /* Serviços em sanfona */
 .services{padding:100px 20px 110px}
@@ -170,7 +171,7 @@ textarea{resize:vertical}
 
 /* Responsivo */
 @media(max-width:860px){
-  .hero{height:580px}.hero-header{height:145px}.brand{width:110px;top:82px}.hero-content{margin-top:80px}.hero-header nav{gap:24px;padding:8px 25px}
+  .hero{height:500px}.hero-header{height:145px}.brand{width:110px;top:82px}.hero-content{margin-top:44px}.hero-header nav{gap:24px;padding:8px 25px}
   .service-content{grid-template-columns:1fr;gap:26px}
   .contact-grid{grid-template-columns:1fr;gap:44px}
   .included-split,.profile-split{grid-template-columns:1fr;min-height:0}
@@ -180,7 +181,7 @@ textarea{resize:vertical}
   .included-copy{padding:56px 40px 70px}
 }
 @media(max-width:640px){
-  .hero{height:540px;background-position:60% center}.hero-header{width:90%;height:175px;padding-top:24px}.hero-header nav{width:100%;justify-content:center;gap:12px;letter-spacing:.4px;padding:9px 10px}.brand{top:77px;width:98px}.hero-content{width:90%;margin-top:72px}.hero h1{letter-spacing:1px}.hero-content p{font-size:var(--fs-sm);max-width:290px}
+  .hero{height:480px;background-position:60% center}.hero-header{width:90%;height:175px;padding-top:24px}.hero-header nav{width:100%;justify-content:center;gap:12px;letter-spacing:.4px;padding:9px 10px}.brand{top:77px;width:98px}.hero-content{width:90%;margin-top:36px}.hero h1{letter-spacing:1px}.hero-content p{font-size:var(--fs-sm);max-width:290px}
   .statement{padding:90px 0}
   .included-media{height:320px}
   .included-copy,.profile-copy{padding:44px 20px 60px}
