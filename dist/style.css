@@ -53,7 +53,7 @@ em{font-style:normal;color:inherit} /* cada frase com uma só fonte e uma só co
 
 /* Abertura (mantida como no layout original) */
 .hero{position:relative;height:540px;background:var(--purple) url('assets/abertura.avif') center/cover;color:var(--cream)}
-.hero-shade{position:absolute;inset:0;background:rgba(0,0,0,.8)}
+.hero-shade{position:absolute;inset:0;background:rgba(73,0,48,.8)} /* #490030 a 80% */
 .hero-header{position:relative;width:86%;margin:auto;height:155px;padding-top:34px}
 .brand{position:absolute;right:0;top:65px;width:145px}
 .brand img{width:100%;height:auto}
