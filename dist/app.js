@@ -13,4 +13,11 @@ names.forEach((name,index)=>{
   detail.append(content);list.append(detail);
 });
 
-document.getElementById('contact-form').addEventListener('submit',event=>{event.preventDefault();const values=new FormData(event.currentTarget);const body=`Nome: ${values.get('nome')}\nTelefone: ${values.get('telefone')}\nEmail: ${values.get('email')}\n\n${values.get('mensagem')}`;window.location.href=`mailto:sejadonodamarca@gmail.com?subject=${encodeURIComponent('Contato pelo site Legacy')}&body=${encodeURIComponent(body)}`;});
+// Envia o formulário como mensagem no WhatsApp da Legacy
+document.getElementById('contact-form').addEventListener('submit',event=>{
+  event.preventDefault();
+  const v=new FormData(event.currentTarget);
+  const text=`Olá! Vim pelo site da Legacy.\n\nNome: ${v.get('nome')}\nTelefone: ${v.get('telefone')}\nEmail: ${v.get('email')}\n\n${v.get('mensagem')}`;
+  const url=`https://wa.me/5583987172983?text=${encodeURIComponent(text)}`;
+  if(!window.open(url,'_blank','noopener'))window.location.href=url;
+});
