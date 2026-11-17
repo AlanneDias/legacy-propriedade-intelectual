@@ -132,7 +132,6 @@ details[open] summary:after{content:'−'}
 .profile-copy p{margin:0 0 16px}
 .story-lead{font-size:var(--fs-md);line-height:1.6;color:var(--cream)}
 .profile-copy .story-lead{margin-bottom:24px}
-.sign{display:block;margin-top:24px;font:var(--script-md) var(--script);color:var(--gold)}
 .profile-photo{position:relative}
 .profile-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 20%}
 
