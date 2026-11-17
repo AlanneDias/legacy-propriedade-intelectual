@@ -12,6 +12,7 @@
   --cream-soft:rgba(239,227,200,.78);
   --tint:#e6d5b2; /* bege um tom mais escuro */
   --line:rgba(195,160,123,.5);
+  --radius:14px; /* cantos arredondados dos contêineres */
   --logo:'Core Deco',Georgia,serif; /* somente no logotipo */
   --display:'Bronova',Arial,sans-serif;
   --script:'Bacalisties','Brush Script MT',cursive;
@@ -121,7 +122,7 @@ details[open] summary:after{content:'−'}
 .pillars:before{content:'';position:absolute;inset:0;background:linear-gradient(110deg,var(--cream) 30%,rgba(239,227,200,.35))}
 /* Cartões que se sobrepõem durante a rolagem */
 .pillar-cards{position:relative;display:flex;flex-direction:column;gap:22vh;width:min(720px,100%);margin:0 auto}
-.pillar{position:sticky;top:calc(90px + var(--i,0) * 26px);display:grid;grid-template-columns:120px 1fr;gap:36px;align-items:center;background:var(--cream);padding:48px 52px;min-height:240px}
+.pillar{position:sticky;border-radius:var(--radius);top:calc(90px + var(--i,0) * 26px);display:grid;grid-template-columns:120px 1fr;gap:36px;align-items:center;background:var(--cream);padding:48px 52px;min-height:240px}
 .pillar:nth-child(2){--i:1;background:var(--tint)}
 .pillar:nth-child(3){--i:2}
 .pillar-icon{display:grid;place-items:center;width:120px;height:120px;border-radius:50%;background:var(--purple)}
@@ -151,7 +152,7 @@ details[open] summary:after{content:'−'}
 .contact-list small{display:block;font-size:var(--fs-xs);font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--gold)}
 .contact-list a{font-size:var(--fs-sm);overflow-wrap:anywhere}
 .contact-list a:hover{text-decoration:underline}
-.contact-form{background:var(--cream);padding:40px 36px 30px}
+.contact-form{background:var(--cream);border-radius:var(--radius);padding:40px 36px 30px}
 .contact-form h3{font-size:var(--fs-lg);text-align:center;margin-bottom:24px}
 label{display:block;font-size:var(--fs-xs);font-weight:600;letter-spacing:1px;text-transform:uppercase;margin-bottom:16px}
 input,textarea{display:block;width:100%;border:0;border-bottom:1px solid var(--line);background:transparent;border-radius:0;padding:8px 0;font:var(--fs-sm) var(--sans);color:var(--purple)}
