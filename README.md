@@ -14,3 +14,8 @@ O formulário abre uma conversa no WhatsApp da Legacy, (83) 98717-2983, com os d
 
 O conteúdo de Registro de Desenho Industrial foi preservado como na referência, onde repete a descrição de Registro de Software. Deve ser revisado pela responsável antes de divulgação pública.
 
+## Rodapé padrão
+
+Todo projeto leva no rodapé a assinatura padrão, com o @ apontando para o Instagram:
+
+> Criado por: Alanne Dias Designer & Web · [@alannedias.designer](https://www.instagram.com/alannedias.designer/)

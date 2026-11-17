@@ -173,6 +173,8 @@ textarea{resize:vertical}
 .footer-top a{display:block;font-size:var(--fs-sm);margin-bottom:6px}
 .footer-top a:hover{text-decoration:underline}
 .footer-bottom{border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:24px;padding:20px 0 26px;font-size:var(--fs-xs);color:var(--soft)}
+.credit a{color:var(--gold)}
+.credit a:hover{text-decoration:underline}
 
 /* Responsivo */
 @media(max-width:860px){
