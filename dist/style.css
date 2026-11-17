@@ -35,7 +35,7 @@ a,button,input,textarea{outline-offset:4px}
 h1,h2,h3,p{margin-top:0}
 h2,h3{font-family:var(--display);font-weight:400}
 h2{font-size:var(--fs-lg);line-height:1.15;margin-bottom:20px}
-em{font-style:normal} /* destaque só na cor, mesma fonte da frase */
+em{font-style:normal;color:inherit} /* cada frase com uma só fonte e uma só cor */
 .script{font-family:var(--script);font-weight:400;letter-spacing:0;text-transform:none}
 .wrap{width:min(940px,100% - 40px);margin:0 auto}
 .narrow{width:min(620px,100% - 40px);margin:0 auto}
@@ -73,7 +73,6 @@ em{font-style:normal} /* destaque só na cor, mesma fonte da frase */
 .statement{position:relative;text-align:center;padding:120px 0}
 .drop-line{position:absolute;top:-40px;left:50%;width:1px;height:120px;background:var(--gold)}
 .statement h2{font-size:var(--fs-lg)}
-.statement em{color:var(--gold)}
 .statement p{font-size:var(--fs-sm);color:var(--soft);max-width:440px;margin:0 auto}
 
 /* O que oferecemos */
@@ -129,7 +128,6 @@ details[open] summary:after{content:'−'}
 .pillar-icon svg{width:56px;height:56px;fill:none;stroke:#c3a07b;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
 .pillar-num{display:block;font-size:var(--fs-xs);font-weight:600;letter-spacing:3px;color:var(--gold);margin-bottom:10px}
 .pillar h3{font-size:var(--fs-lg);line-height:1.15;margin:0}
-.pillar h3 em{color:var(--gold)}
 .rule{display:block;width:34px;height:1px;background:var(--gold);margin:18px 0}
 .pillar p{font-size:var(--fs-sm);color:var(--soft);margin:0}
 .pillars-cta{position:relative;text-align:center;margin-top:46px}
@@ -147,7 +145,6 @@ details[open] summary:after{content:'−'}
 /* Contato */
 .contact{padding:100px 0}
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;width:min(940px,100% - 40px);margin:0 auto;align-items:center}
-.contact-copy h2 em{color:var(--gold)}
 .contact-copy>p{font-size:var(--fs-sm);color:var(--soft);margin-bottom:30px}
 .contact-list{list-style:none;margin:0;padding:0;display:grid;gap:14px}
 .contact-list li{border-top:1px solid var(--line);padding-top:12px}
@@ -169,7 +166,6 @@ textarea{resize:vertical}
 .footer-name{font-family:var(--logo);font-size:var(--logo-md);letter-spacing:9px;font-weight:300}
 .footer-top p{font-size:var(--fs-xs);color:var(--soft);margin-bottom:10px}
 .footer-top h3{font-size:var(--fs-lg);line-height:1.2;max-width:380px;margin-bottom:16px}
-.footer-top h3 em{color:var(--gold)}
 .footer-top a{display:block;font-size:var(--fs-sm);margin-bottom:6px}
 .footer-top a:hover{text-decoration:underline}
 .footer-bottom{border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:24px;padding:20px 0 26px;font-size:var(--fs-xs);color:var(--soft)}
