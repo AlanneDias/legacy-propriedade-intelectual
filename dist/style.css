@@ -53,7 +53,7 @@ em{font-style:normal;color:inherit} /* cada frase com uma só fonte e uma só co
 
 /* Abertura (mantida como no layout original) */
 .hero{position:relative;height:540px;background:var(--purple) url('assets/abertura.avif') center/cover;color:var(--cream)}
-.hero-shade{position:absolute;inset:0;background:rgba(73,0,48,.8)} /* #490030 a 80% */
+.hero-shade{position:absolute;inset:0;background:rgba(0,0,0,.8)}
 .hero-header{position:relative;width:86%;margin:auto;height:155px;padding-top:34px}
 .brand{position:absolute;right:0;top:65px;width:145px}
 .brand img{width:100%;height:auto}
@@ -66,8 +66,8 @@ em{font-style:normal;color:inherit} /* cada frase com uma só fonte e uma só co
 .social{position:absolute;right:7%;bottom:34px;list-style:none;display:flex;gap:22px;margin:0;padding:0}
 .social a{display:block;padding:4px;transition:opacity .2s}
 .social a:hover{opacity:.7}
-.social svg{display:block;width:24px;height:24px;fill:none;stroke:#c3a07b;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
-.social .dot,.social .fill{fill:#c3a07b;stroke:none}
+.social svg{display:block;width:24px;height:24px;fill:none;stroke:#750450;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.social .dot,.social .fill{fill:#750450;stroke:none}
 
 /* Declaração */
 .statement{position:relative;text-align:center;padding:120px 0}
