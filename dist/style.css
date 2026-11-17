@@ -108,15 +108,20 @@ details[open] summary:after{content:'−'}
 .service-content li::marker{color:var(--gold)}
 
 /* Pilares sobre foto */
-.pillars{position:relative;padding:110px 20px;overflow:hidden}
+.pillars{position:relative;padding:110px 20px;overflow:clip}
 .pillars-bg{position:absolute;inset:0;background:url('assets/cartoes.jpg') center/cover;filter:grayscale(1) contrast(.9);opacity:.38}
 .pillars:before{content:'';position:absolute;inset:0;background:linear-gradient(110deg,var(--cream) 30%,rgba(239,227,200,.35))}
-.pillar-cards{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:26px;width:min(960px,100%);margin:0 auto}
-.pillar{background:var(--cream);padding:44px 30px 40px;text-align:center}
-.pillar-num{display:block;font-size:var(--fs-xs);font-weight:600;letter-spacing:3px;color:var(--gold);margin-bottom:12px}
-.pillar h3{font-size:var(--fs-md);line-height:1.15;margin:0}
+/* Cartões que se sobrepõem durante a rolagem */
+.pillar-cards{position:relative;display:flex;flex-direction:column;gap:22vh;width:min(720px,100%);margin:0 auto}
+.pillar{position:sticky;top:calc(90px + var(--i,0) * 26px);display:grid;grid-template-columns:120px 1fr;gap:36px;align-items:center;background:var(--cream);padding:48px 52px;min-height:240px}
+.pillar:nth-child(2){--i:1;background:var(--tint)}
+.pillar:nth-child(3){--i:2}
+.pillar-icon{display:grid;place-items:center;width:120px;height:120px;border-radius:50%;background:var(--purple)}
+.pillar-icon svg{width:56px;height:56px;fill:none;stroke:#c3a07b;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.pillar-num{display:block;font-size:var(--fs-xs);font-weight:600;letter-spacing:3px;color:var(--gold);margin-bottom:10px}
+.pillar h3{font-size:var(--fs-lg);line-height:1.15;margin:0}
 .pillar h3 em{color:var(--gold)}
-.rule{display:block;width:34px;height:1px;background:var(--gold);margin:22px auto}
+.rule{display:block;width:34px;height:1px;background:var(--gold);margin:18px 0}
 .pillar p{font-size:var(--fs-sm);color:var(--soft);margin:0}
 .pillars-cta{position:relative;text-align:center;margin-top:46px}
 
@@ -169,7 +174,6 @@ textarea{resize:vertical}
 /* Responsivo */
 @media(max-width:860px){
   .hero{height:580px}.hero-header{height:145px}.brand{width:110px;top:82px}.hero-content{margin-top:80px}.hero-header nav{gap:24px;padding:8px 25px}
-  .pillar-cards{grid-template-columns:1fr;max-width:420px}
   .service-content ul{columns:1}
   .contact-grid{grid-template-columns:1fr;gap:44px}
 }
@@ -182,6 +186,10 @@ textarea{resize:vertical}
   .included-grid h2{text-align:center}
   .included-grid h2 br{display:none}
   .pillars{padding:70px 20px}
+  .pillar{grid-template-columns:1fr;gap:20px;padding:34px 26px;text-align:center;top:calc(70px + var(--i,0) * 18px)}
+  .pillar-icon{width:84px;height:84px;margin:0 auto}
+  .pillar-icon svg{width:40px;height:40px}
+  .rule{margin:16px auto}
   .services{padding:70px 16px 80px}
   summary{gap:14px}
   .service-content{padding:0 4px 22px 40px}
