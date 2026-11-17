@@ -18,12 +18,12 @@
   --script:'Bacalisties','Brush Script MT',cursive;
   --sans:'Bronova',Arial,sans-serif;
   /* Escala de tipos: no máximo 4 tamanhos por fonte */
-  --fs-xs:11px;                       /* Bronova: rótulos, botões, notas */
-  --fs-sm:13px;                       /* Bronova: texto corrido e lista de serviços */
-  --fs-md:17px;                       /* Bronova: destaques */
-  --fs-lg:clamp(28px,2.8vw,40px);     /* Bronova: títulos */
-  --script-md:30px;                   /* Bacalisties */
-  --script-lg:clamp(36px,3.6vw,46px); /* Bacalisties */
+  --fs-xs:14px;                       /* Bronova: rótulos, botões, notas */
+  --fs-sm:16px;                       /* Bronova: texto corrido e lista de serviços */
+  --fs-md:20px;                       /* Bronova: destaques */
+  --fs-lg:clamp(28px,2.8vw,38px);     /* Bronova: títulos */
+  --script-md:40px;                   /* Bacalisties */
+  --script-lg:clamp(44px,4.2vw,56px); /* Bacalisties */
   --logo-md:30px;                     /* Core Deco */
   --logo-lg:clamp(39px,4vw,51px);     /* Core Deco */
 }
@@ -198,3 +198,72 @@ textarea{resize:vertical}
   .footer-bottom{flex-direction:column;gap:6px}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+
+/* Hierarquia e alinhamento: preserva as fontes e a composição da marca. */
+h1,h2,h3{text-wrap:balance}
+.hero-header,.hero-content{width:min(1040px,86%)}
+.hero-header nav{padding:0 22px;gap:12px;letter-spacing:.04em}
+.hero-header nav a{display:block;padding:10px 12px;line-height:1.5}
+.hero-content p{max-width:650px}
+.qs-title{line-height:1.4;letter-spacing:.06em;margin-bottom:16px}
+.qs-block{padding:32px 0}
+.checks li{padding-left:26px;margin-bottom:10px}
+.checks li:before{top:.7em}
+.services-head{max-width:640px}
+.services-head h2,.profile h2{line-height:1.2}
+.service-list{width:min(940px,100%)}
+summary{min-height:68px;line-height:1.6;align-items:baseline}
+.s-num{flex:0 0 28px;min-width:28px}
+summary:after{flex:0 0 24px;text-align:center}
+.service-content{padding-left:52px;gap:40px}
+.svc-intro p{line-height:1.8}
+.svc-lists h4{line-height:1.55;letter-spacing:.06em}
+.svc-lists li:before{top:1.2em}
+.pillar h3{line-height:1.25}
+.pillar p{line-height:1.8}
+.pillar-num{letter-spacing:.12em}
+.profile-copy p{line-height:1.8;margin-bottom:20px}
+.profile-copy p:last-child{margin-bottom:0}
+.profile-copy .story-lead{line-height:1.65;margin-bottom:28px}
+.contact-grid{width:min(1040px,100% - 48px);align-items:start}
+.contact-copy h2{line-height:1.3}
+.contact-form h3{text-align:left;line-height:1.3}
+label{letter-spacing:.04em;line-height:1.5}
+input,textarea{font-size:var(--fs-sm);line-height:1.5;min-height:46px}
+.btn{letter-spacing:.06em;min-height:44px;display:inline-flex;align-items:center}
+.form-note{text-align:left;line-height:1.65}
+.site-footer{width:min(1040px,100% - 48px)}
+.footer-top{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+.footer-top h3{line-height:1.3;margin-bottom:24px}
+.footer-top p,.footer-top a{line-height:1.8}
+.footer-bottom{line-height:1.7;align-items:start}
+.footer-bottom>span{flex:1}
+.footer-bottom .credit{text-align:right}
+@media(max-width:860px){
+ .included-copy,.profile-copy{width:min(720px,100%);margin-inline:auto;padding-inline:32px}
+ .contact-grid{width:min(720px,100% - 48px)}
+ .service-content{gap:28px}
+ .hero-header nav{gap:4px;padding-inline:14px}
+ .hero-header nav a{padding-inline:10px}
+}
+@media(max-width:640px){
+ :root{--fs-xs:12px;--fs-sm:16px;--fs-md:20px;--fs-lg:28px;--script-md:40px;--script-lg:44px}
+ .hero{min-height:520px;height:auto;padding-bottom:100px}
+ .hero-header{width:90%}
+ .hero-content{width:86%;margin-top:36px}
+ .hero-header nav{gap:0;padding:0 6px;flex-wrap:nowrap;font-size:var(--fs-xs);letter-spacing:0}
+ .hero-header nav a{padding:11px 7px;text-align:center}
+ .hero-content p{max-width:310px;line-height:1.7}
+ .hero h1{line-height:1.45}
+ .included-copy,.profile-copy{padding:44px 24px 56px}
+ .qs-title{font-size:var(--fs-md);letter-spacing:.04em}
+ .services{padding-inline:24px}
+ summary{gap:12px;font-size:var(--fs-sm);line-height:1.5;padding-block:20px}
+ .s-num{flex-basis:24px;min-width:24px}
+ .service-content{padding:4px 0 28px}
+ .pillar{padding:32px 24px}
+ .contact-grid,.site-footer{width:calc(100% - 48px)}
+ .contact-form{padding:30px 24px}
+ .footer-top{grid-template-columns:1fr;gap:32px}
+ .footer-bottom .credit{text-align:left}
+}
