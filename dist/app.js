@@ -24,10 +24,24 @@ names.forEach((name,index)=>{
 });
 
 // Envia o formulário como mensagem no WhatsApp da Legacy
+// Assuntos do contato: um botão para cada serviço, pode marcar mais de um
+const topicList=document.getElementById('topic-list');
+const topicError=document.getElementById('topic-error');
+names.forEach((name,index)=>{
+  const label=document.createElement('label');label.className='topic';
+  const box=document.createElement('input');box.type='checkbox';box.name='assunto';box.value=name;
+  box.addEventListener('change',()=>{topicError.hidden=true});
+  const span=document.createElement('span');span.textContent=name;
+  label.append(box,span);topicList.append(label);
+});
+
+// Envia o formulário como mensagem no WhatsApp da Legacy
 document.getElementById('contact-form').addEventListener('submit',event=>{
   event.preventDefault();
   const v=new FormData(event.currentTarget);
-  const text=`Olá! Vim pelo site da Legacy.\n\nNome: ${v.get('nome')}\nTelefone: ${v.get('telefone')}\nEmail: ${v.get('email')}\n\n${v.get('mensagem')}`;
+  const topics=v.getAll('assunto');
+  if(!topics.length){topicError.hidden=false;topicList.querySelector('input').focus();return}
+  const text=`Olá! Vim pelo site da Legacy.\n\nNome: ${v.get('nome')}\nTelefone: ${v.get('telefone')}\nEmail: ${v.get('email')}\nAssunto: ${topics.join(', ')}\n\n${v.get('mensagem')}`;
   const url=`https://wa.me/5583987172983?text=${encodeURIComponent(text)}`;
   if(!window.open(url,'_blank','noopener'))window.location.href=url;
 });

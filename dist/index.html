@@ -125,6 +125,11 @@
       <label>Nome<input name="nome" autocomplete="name" required></label>
       <label>Telefone<input name="telefone" type="tel" autocomplete="tel" required></label>
       <label>Email<input name="email" type="email" autocomplete="email" required></label>
+      <fieldset class="topics">
+        <legend>Assunto <span>(escolha um ou mais)</span></legend>
+        <div class="topic-list" id="topic-list"></div>
+        <p class="topic-error" id="topic-error" role="alert" hidden>Escolha pelo menos um assunto.</p>
+      </fieldset>
       <label>Mensagem<textarea name="mensagem" rows="3" required></textarea></label>
       <button class="btn" type="submit">Enviar →</button>
       <p class="form-note">A mensagem será aberta no WhatsApp da Legacy.</p>
