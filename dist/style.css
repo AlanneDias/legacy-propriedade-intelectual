@@ -268,3 +268,8 @@ input,textarea{font-size:var(--fs-sm);line-height:1.5;min-height:46px}
  .footer-top{grid-template-columns:1fr;gap:32px}
  .footer-bottom .credit{text-align:left}
 }
+/* Menu sempre em uma linha nos celulares estreitos */
+@media(max-width:400px){
+ .hero-header nav{font-size:min(var(--fs-xs),3vw)}
+ .hero-header nav a{padding-inline:clamp(4px,1.5vw,7px)}
+}
