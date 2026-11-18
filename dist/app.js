@@ -41,7 +41,7 @@ document.getElementById('contact-form').addEventListener('submit',event=>{
   const v=new FormData(event.currentTarget);
   const topics=v.getAll('assunto');
   if(!topics.length){topicError.hidden=false;topicList.querySelector('input').focus();return}
-  const text=`Olá! Vim pelo site da Legacy.\n\nNome: ${v.get('nome')}\nTelefone: ${v.get('telefone')}\nEmail: ${v.get('email')}\nAssunto: ${topics.join(', ')}\n\n${v.get('mensagem')}`;
+  const text=`Olá! Vim pelo site da Legacy.\n\nNome: ${v.get('nome')}\nTelefone: ${v.get('telefone')}\nAssunto: ${topics.join(', ')}\n\n${v.get('mensagem')}`;
   const url=`https://wa.me/5583987172983?text=${encodeURIComponent(text)}`;
   if(!window.open(url,'_blank','noopener'))window.location.href=url;
 });
