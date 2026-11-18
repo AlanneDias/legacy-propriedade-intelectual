@@ -284,3 +284,8 @@ input,textarea{font-size:var(--fs-sm);line-height:1.5;min-height:46px}
 .topic input:checked+span{background:var(--purple);border-color:var(--purple);color:var(--cream)}
 .topic input:focus-visible+span{outline:2px solid var(--purple);outline-offset:2px}
 .topic-error{margin:10px 0 0;font-size:var(--fs-xs);color:var(--purple);font-weight:400}
+
+/* Reunião: data e período */
+.meeting-date{margin-bottom:14px}
+.meeting-date input{color-scheme:light;max-width:220px}
+.meeting .topic-list{gap:8px}

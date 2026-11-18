@@ -123,6 +123,15 @@
         <div class="topic-list" id="topic-list"></div>
         <p class="topic-error" id="topic-error" role="alert" hidden>Escolha pelo menos um assunto.</p>
       </fieldset>
+      <fieldset class="topics meeting">
+        <legend>Reunião <span>(data e período de preferência)</span></legend>
+        <label class="meeting-date">Data<input name="data" type="date" id="meeting-date" required></label>
+        <div class="topic-list" role="radiogroup" aria-label="Período">
+          <label class="topic"><input type="radio" name="periodo" value="Manhã" required><span>Manhã</span></label>
+          <label class="topic"><input type="radio" name="periodo" value="Tarde"><span>Tarde</span></label>
+          <label class="topic"><input type="radio" name="periodo" value="Noite"><span>Noite</span></label>
+        </div>
+      </fieldset>
       <label>Mensagem<textarea name="mensagem" rows="3" required></textarea></label>
       <button class="btn" type="submit">Enviar →</button>
       <p class="form-note">A mensagem será aberta no WhatsApp da Legacy.</p>

@@ -23,7 +23,6 @@ names.forEach((name,index)=>{
   detail.append(content);list.append(detail);
 });
 
-// Envia o formulário como mensagem no WhatsApp da Legacy
 // Assuntos do contato: um botão para cada serviço, pode marcar mais de um
 const topicList=document.getElementById('topic-list');
 const topicError=document.getElementById('topic-error');
@@ -35,13 +34,19 @@ const topicError=document.getElementById('topic-error');
   label.append(box,span);topicList.append(label);
 });
 
+// Reunião: a data não pode ser no passado
+const meetingDate=document.getElementById('meeting-date');
+const today=new Date();today.setMinutes(today.getMinutes()-today.getTimezoneOffset());
+meetingDate.min=today.toISOString().slice(0,10);
+const formatDate=iso=>iso.split('-').reverse().join('/');
+
 // Envia o formulário como mensagem no WhatsApp da Legacy
 document.getElementById('contact-form').addEventListener('submit',event=>{
   event.preventDefault();
   const v=new FormData(event.currentTarget);
   const topics=v.getAll('assunto');
   if(!topics.length){topicError.hidden=false;topicList.querySelector('input').focus();return}
-  const text=`Olá! Vim pelo site da Legacy.\n\nNome: ${v.get('nome')}\nTelefone: ${v.get('telefone')}\nAssunto: ${topics.join(', ')}\n\n${v.get('mensagem')}`;
+  const text=`Olá! Vim pelo site da Legacy.\n\nNome: ${v.get('nome')}\nTelefone: ${v.get('telefone')}\nAssunto: ${topics.join(', ')}\nReunião: ${formatDate(v.get('data'))}, período da ${v.get('periodo').toLowerCase()}\n\n${v.get('mensagem')}`;
   const url=`https://wa.me/5583987172983?text=${encodeURIComponent(text)}`;
   if(!window.open(url,'_blank','noopener'))window.location.href=url;
 });
