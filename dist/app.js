@@ -27,7 +27,7 @@ names.forEach((name,index)=>{
 // Assuntos do contato: um botão para cada serviço, pode marcar mais de um
 const topicList=document.getElementById('topic-list');
 const topicError=document.getElementById('topic-error');
-names.forEach((name,index)=>{
+[...names,'Outro assunto'].forEach(name=>{
   const label=document.createElement('label');label.className='topic';
   const box=document.createElement('input');box.type='checkbox';box.name='assunto';box.value=name;
   box.addEventListener('change',()=>{topicError.hidden=true});
